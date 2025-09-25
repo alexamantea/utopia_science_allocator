@@ -446,6 +446,10 @@ class UtopiaScienceAllocator {
       // Use the correct order instead of Object.entries
       const orderedSubcategories = categoryOrder[category] || Object.keys(categoryData.categories);
       
+      // Calculate total current books in this category once
+      const totalCurrentInCategory = Object.values(categoryData.categories).reduce((sum, val) => sum + (val.current || 0), 0);
+      const totalWeightInCategory = Object.values(this.defaultRatios[category]).reduce((sum, w) => sum + w, 0);
+      
       orderedSubcategories.forEach(subcategory => {
         const data = categoryData.categories[subcategory];
         if (!data) return; // Skip if subcategory doesn't exist
@@ -454,9 +458,8 @@ class UtopiaScienceAllocator {
         const suggestedClass = data.suggested > 0 ? 'suggested-cell-high' : 'suggested-cell-low';
         
         // Calculate current ratio percentage
-        const totalCurrentInCategory = Object.values(categoryData.categories).reduce((sum, val) => sum + val, 0);
         const currentRatio = totalCurrentInCategory > 0 ? ((data.current / totalCurrentInCategory) * 100).toFixed(1) : '0.0';
-        const targetRatio = ((data.weight / Object.values(this.defaultRatios[category]).reduce((sum, w) => sum + w, 0)) * 100).toFixed(1);
+        const targetRatio = ((data.weight / totalWeightInCategory) * 100).toFixed(1);
         
         row.innerHTML = `
           <td class="category-cell">${category.charAt(0).toUpperCase() + category.slice(1)}</td>

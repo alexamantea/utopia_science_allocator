@@ -2,6 +2,16 @@
 
 A Chrome extension to help **Utopia** players manage science book allocation automatically. The extension reads current values from the science page, calculates optimal distribution based on player-defined ratios, and automatically fills in the page's input fields with suggested values.
 
+## 📸 Screenshots
+
+<!-- Add screenshots here once you have them -->
+<!-- 
+![Extension Button](screenshots/extension-button.png)
+![Configuration Popup](screenshots/popup-config.png)
+![Allocation Table](screenshots/allocation-table.png)
+![Science Page](screenshots/science-page.png)
+-->
+
 ## ✨ Features
 
 - **🔍 Automatic Data Extraction**: Reads current science book allocations from the Utopia page
