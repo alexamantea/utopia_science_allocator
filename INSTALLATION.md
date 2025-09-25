@@ -27,7 +27,7 @@
 ### Step 5: Use on Utopia
 1. Navigate to the Utopia science allocation page:
    - `https://utopia-game.com/wol/game/science` (World of Legends)
-   - `https://utopia-game.com/gen/game/science` (General)
+   - `https://utopia-game.com/gen/game/science` (Genesis)
 2. Look for the **"Calculate Distribution"** button (top-right corner)
 3. Click it to see your optimal science distribution
 4. Review and adjust the suggestions as needed
