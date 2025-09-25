@@ -58,7 +58,7 @@ utopia-science-extension/
 
 1. **Navigate** to the Utopia science allocation page:
    - `https://utopia-game.com/wol/game/science` (World of Legends)
-   - `https://utopia-game.com/gen/game/science` (General)
+   - `https://utopia-game.com/gen/game/science` (Genesis)
 2. **Look for the floating "Calculate Distribution" button** (top-right corner)
 3. **Click "Calculate Distribution"** to analyze current allocations
 4. **Review the suggestions** in the floating table:

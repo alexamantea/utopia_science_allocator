@@ -19,7 +19,18 @@
         "*://utopia-game.com/gen/game/science*",
         "*://*.utopia-game.com/gen/game/science*"
       ],
-      "js": ["content.js"],
+      "js": [
+        "src/shared/constants.js",
+        "src/shared/utils.js",
+        "src/shared/ui-components.js",
+        "src/core/storage-manager.js",
+        "src/core/page-detector.js",
+        "src/features/science-allocator/science-calculator.js",
+        "src/features/science-allocator/science-ui.js",
+        "src/features/science-allocator/science-content.js",
+        "src/core/extension-manager.js",
+        "src/content.js"
+      ],
       "css": ["styles.css"],
       "run_at": "document_end"
     }
