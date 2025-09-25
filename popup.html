@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Utopia Science Allocator</title>
+  <style>
+    body {
+      width: 500px;
+      min-height: 500px;
+      margin: 0;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f8f9fa;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      margin: 0;
+      color: #2c3e50;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .header p {
+      margin: 5px 0 0 0;
+      color: #6c757d;
+      font-size: 12px;
+    }
+
+    .category-section {
+      background: white;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .category-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid #e9ecef;
+    }
+
+    .column-headers {
+      margin-bottom: 15px;
+      padding: 10px 0;
+      border-bottom: 2px solid #e9ecef;
+    }
+
+    .header-row {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      color: #495057;
+    }
+
+    .header-label {
+      flex: 1;
+      text-align: left;
+    }
+
+    .header-ratio {
+      width: 80px;
+      text-align: center;
+    }
+
+    .ratio-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .ratio-label {
+      flex: 1;
+      font-size: 13px;
+      color: #495057;
+      text-transform: capitalize;
+    }
+
+    .ratio-input {
+      width: 80px;
+      padding: 4px 8px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .ratio-input:focus {
+      outline: none;
+      border-color: #4a90e2;
+      box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.25);
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #4a90e2;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #357abd;
+    }
+
+    .btn-secondary {
+      background: #6c757d;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: #5a6268;
+    }
+
+    .status {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      text-align: center;
+      display: none;
+    }
+
+    .status-success {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+
+    .status-error {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+
+    .instructions {
+      background: #e3f2fd;
+      border: 1px solid #bbdefb;
+      border-radius: 4px;
+      padding: 10px;
+      margin-bottom: 15px;
+      font-size: 12px;
+      color: #1565c0;
+    }
+
+    .instructions h4 {
+      margin: 0 0 5px 0;
+      font-size: 13px;
+    }
+
+    .instructions p {
+      margin: 0;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🎯 Utopia Science Allocator</h1>
+    <p>Configure your science distribution ratios</p>
+  </div>
+
+  <div class="instructions">
+    <h4>How it works:</h4>
+    <p>Set weights for each science category. Higher weights = more books allocated. You can use any positive number (no limit). The extension will automatically calculate optimal distribution based on your preferences.</p>
+  </div>
+
+  <!-- Column Headers -->
+  <div class="column-headers">
+    <div class="header-row">
+      <span class="header-label">Science Type</span>
+      <span class="header-ratio">Weight</span>
+    </div>
+  </div>
+
+  <div class="category-section">
+    <div class="category-title">🏛️ Economy</div>
+    <div class="ratio-group">
+      <span class="ratio-label">Alchemy</span>
+      <input type="number" class="ratio-input" id="economy-alchemy" min="0" step="1" value="2">
+    </div>
+    <div class="ratio-group">
+      <span class="ratio-label">Tools</span>
+      <input type="number" class="ratio-input" id="economy-tools" min="0" step="1" value="2">
+    </div>
+    <div class="ratio-group">
+      <span class="ratio-label">Housing</span>
+      <input type="number" class="ratio-input" id="economy-housing" min="0" step="1" value="1">
+    </div>
+    <div class="ratio-group">
+      <span class="ratio-label">Production</span>
+      <input type="number" class="ratio-input" id="economy-production" min="0" step="1" value="2">
+    </div>
+    <div class="ratio-group">
+      <span class="ratio-label">Bookkeeping</span>
+      <input type="number" class="ratio-input" id="economy-bookkeeping" min="0" step="1" value="1">
+    </div>
+    <div class="ratio-group">
+      <span class="ratio-label">Artisan</span>
+      <input type="number" class="ratio-input" id="economy-artisan" min="0" step="1" value="1">
+    </div>
+  </div>
+
+  <div class="category-section">
+    <div class="category-title">⚔️ Military</div>
+    <div class="ratio-group">
+      <span class="ratio-label">Strategy</span>
+      <input type="number" class="ratio-input" id="military-strategy" min="0" step="1" value="2">
+    </div>
+    <div class="ratio-group">
+      <span class="ratio-label">Siege</span>
+      <input type="number" class="ratio-input" id="military-siege" min="0" step="1" value="1">
+    </div>
+    <div class="ratio-group">
+      <span class="ratio-label">Tactics</span>
+      <input type="number" class="ratio-input" id="military-tactics" min="0" step="1" value="2">
+    </div>
+    <div class="ratio-group">
+      <span class="ratio-label">Valor</span>
+      <input type="number" class="ratio-input" id="military-valor" min="0" step="1" value="1">
+    </div>
+    <div class="ratio-group">
+      <span class="ratio-label">Heroism</span>
+      <input type="number" class="ratio-input" id="military-heroism" min="0" step="1" value="1">
+    </div>
+    <div class="ratio-group">
+      <span class="ratio-label">Resilience</span>
+      <input type="number" class="ratio-input" id="military-resilience" min="0" step="1" value="1">
+    </div>
+  </div>
+
+  <div class="category-section">
+    <div class="category-title">🔮 Arcane Arts</div>
+    <div class="ratio-group">
+      <span class="ratio-label">Crime</span>
+      <input type="number" class="ratio-input" id="arcane-crime" min="0" step="1" value="2">
+    </div>
+    <div class="ratio-group">
+      <span class="ratio-label">Channeling</span>
+      <input type="number" class="ratio-input" id="arcane-channeling" min="0" step="1" value="2">
+    </div>
+    <div class="ratio-group">
+      <span class="ratio-label">Shielding</span>
+      <input type="number" class="ratio-input" id="arcane-shielding" min="0" step="1" value="1">
+    </div>
+    <div class="ratio-group">
+      <span class="ratio-label">Cunning</span>
+      <input type="number" class="ratio-input" id="arcane-cunning" min="0" step="1" value="1">
+    </div>
+    <div class="ratio-group">
+      <span class="ratio-label">Sorcery</span>
+      <input type="number" class="ratio-input" id="arcane-sorcery" min="0" step="1" value="1">
+    </div>
+    <div class="ratio-group">
+      <span class="ratio-label">Finesse</span>
+      <input type="number" class="ratio-input" id="arcane-finesse" min="0" step="1" value="1">
+    </div>
+  </div>
+
+  <div class="buttons">
+    <button class="btn btn-primary" id="save-ratios">Save Ratios</button>
+    <button class="btn btn-secondary" id="reset-defaults">Reset Defaults</button>
+  </div>
+
+  <div class="status" id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

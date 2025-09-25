@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utopia Science Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .science-section {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .science-section h2 {
+            color: #333;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 10px;
+        }
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            gap: 10px;
+        }
+        .input-group label {
+            min-width: 120px;
+            font-weight: bold;
+        }
+        .input-group input {
+            width: 80px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .total {
+            background: #e3f2fd;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>🏛️ Utopia Science Allocation Test Page</h1>
+    <p>This is a test page to demonstrate the Utopia Science Allocator extension. The extension should detect this as a science page and inject its UI.</p>
+
+    <div class="science-section">
+        <h2>🏛️ Economy - 10 scientists - 14,963 books available</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Science Type</th>
+                    <th>Number of books</th>
+                    <th>Effect</th>
+                    <th>Invest</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Alchemy</td>
+                    <td>0</td>
+                    <td>+0.0% Income</td>
+                    <td><input type="text" class="four-digit-input" name="quantity_0" /></td>
+                </tr>
+                <tr>
+                    <td>Tools</td>
+                    <td>0</td>
+                    <td>+0.0% Building Effectiveness</td>
+                    <td><input type="text" class="four-digit-input" name="quantity_1" /></td>
+                </tr>
+                <tr>
+                    <td>Housing</td>
+                    <td>10,640</td>
+                    <td>+2.1% Population Limits</td>
+                    <td><input type="text" class="four-digit-input" name="quantity_2" /></td>
+                </tr>
+                <tr>
+                    <td>Production</td>
+                    <td>106,062</td>
+                    <td>+50.2% Food & Rune Production</td>
+                    <td><input type="text" class="four-digit-input" name="quantity_3" /></td>
+                </tr>
+                <tr>
+                    <td>Bookkeeping</td>
+                    <td>0</td>
+                    <td>-0.0% Wage Reduction</td>
+                    <td><input type="text" class="four-digit-input" name="quantity_4" /></td>
+                </tr>
+                <tr>
+                    <td>Artisan</td>
+                    <td>0</td>
+                    <td>-0.0% Construction Time & Cost</td>
+                    <td><input type="text" class="four-digit-input" name="quantity_5" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="science-section">
+        <h2>⚔️ Military - 5 scientists - 10,360 books available</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Science Type</th>
+                    <th>Number of books</th>
+                    <th>Effect</th>
+                    <th>Invest</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Strategy</td>
+                    <td>3,885</td>
+                    <td>+1.9% Defensive Military Efficiency</td>
+                    <td><input type="text" class="four-digit-input" name="quantity_6" /></td>
+                </tr>
+                <tr>
+                    <td>Siege</td>
+                    <td>0</td>
+                    <td>+0.0% Battle Gains</td>
+                    <td><input type="text" class="four-digit-input" name="quantity_7" /></td>
+                </tr>
+                <tr>
+                    <td>Tactics</td>
+                    <td>86,755</td>
+                    <td>+7.7% Offensive Military Efficiency</td>
+                    <td><input type="text" class="four-digit-input" name="quantity_8" /></td>
+                </tr>
+                <tr>
+                    <td>Valor</td>
+                    <td>0</td>
+                    <td>-0.0% Military Train Time</td>
+                    <td><input type="text" class="four-digit-input" name="quantity_9" /></td>
+                </tr>
+                <tr>
+                    <td>Heroism</td>
+                    <td>0</td>
+                    <td>+0.0% Draft Speed</td>
+                    <td><input type="text" class="four-digit-input" name="quantity_10" /></td>
+                </tr>
+                <tr>
+                    <td>Resilience</td>
+                    <td>5,175</td>
+                    <td>-2.8% Military Casualties</td>
+                    <td><input type="text" class="four-digit-input" name="quantity_11" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="science-section">
+        <h2>🔮 Arcane Arts - 2 scientists - 3,192 books available</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Science Type</th>
+                    <th>Number of books</th>
+                    <th>Effect</th>
+                    <th>Invest</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Crime</td>
+                    <td>25,954</td>
+                    <td>+18.8% Thief Effectiveness (TPA)</td>
+                    <td><input type="text" class="four-digit-input" name="quantity_12" /></td>
+                </tr>
+                <tr>
+                    <td>Channeling</td>
+                    <td>1,328</td>
+                    <td>+5.9% Wizard Effectiveness (WPA)</td>
+                    <td><input type="text" class="four-digit-input" name="quantity_13" /></td>
+                </tr>
+                <tr>
+                    <td>Shielding</td>
+                    <td>0</td>
+                    <td>-0.0% Damage from Enemy Operations</td>
+                    <td><input type="text" class="four-digit-input" name="quantity_14" /></td>
+                </tr>
+                <tr>
+                    <td>Cunning</td>
+                    <td>0</td>
+                    <td>+0.0% Thievery Sabotage Damage</td>
+                    <td><input type="text" class="four-digit-input" name="quantity_15" /></td>
+                </tr>
+                <tr>
+                    <td>Sorcery</td>
+                    <td>0</td>
+                    <td>+0.0% Magic Instant Spell Damage</td>
+                    <td><input type="text" class="four-digit-input" name="quantity_16" /></td>
+                </tr>
+                <tr>
+                    <td>Finesse</td>
+                    <td>0</td>
+                    <td>-0.0% Wizard and Thief losses</td>
+                    <td><input type="text" class="four-digit-input" name="quantity_17" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="margin-top: 30px; padding: 20px; background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 4px;">
+        <h3>🧪 Testing Instructions</h3>
+        <ol>
+            <li>Make sure the Utopia Science Allocator extension is installed and enabled</li>
+            <li>Look for the "Calculate Distribution" button in the top-right corner</li>
+            <li>Click it to see the extension analyze the current values</li>
+            <li>Review the suggestions in the floating table</li>
+            <li>Try adjusting the suggested values</li>
+            <li>Click "Apply Allocation" to see the form fields update</li>
+        </ol>
+        <p><strong>Note:</strong> This is a test page. The extension should work similarly on actual Utopia science pages.</p>
+    </div>
+</body>
+</html>

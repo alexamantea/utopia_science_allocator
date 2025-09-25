@@ -1,0 +1,432 @@
+/* Utopia Science Allocator - Styles */
+
+.utopia-allocator-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  background: #ffffff;
+  border: 2px solid #4a90e2;
+  border-radius: 8px;
+  padding: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  min-width: 400px;
+  max-width: 800px;
+}
+
+.utopia-allocator-header {
+  background: #4a90e2;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px 6px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+.utopia-allocator-header span {
+  font-size: 16px;
+}
+
+.utopia-allocator-content {
+  padding: 15px;
+}
+
+.utopia-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  margin: 5px;
+  display: inline-block;
+}
+
+.utopia-btn-primary {
+  background: #4a90e2;
+  color: white;
+}
+
+.utopia-btn-primary:hover {
+  background: #357abd;
+  transform: translateY(-1px);
+}
+
+.utopia-btn-success {
+  background: #28a745;
+  color: white;
+}
+
+.utopia-btn-success:hover {
+  background: #218838;
+  transform: translateY(-1px);
+}
+
+.utopia-btn-close {
+  background: #dc3545;
+  color: white;
+  padding: 4px 8px;
+  font-size: 16px;
+  line-height: 1;
+  min-width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.utopia-btn-close:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+}
+
+.utopia-reopen-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+.utopia-reopen-btn:hover {
+  background: #357abd;
+  transform: scale(1.1);
+}
+
+.utopia-table-container {
+  margin: 15px 0;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.utopia-allocation-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.utopia-allocation-table th {
+  background: #4a90e2;
+  color: white;
+  padding: 12px 8px;
+  text-align: center;
+  font-weight: 600;
+  border-bottom: 2px solid #357abd;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.utopia-allocation-table td {
+  padding: 8px;
+  border-bottom: 1px solid #dee2e6;
+  vertical-align: middle;
+}
+
+.utopia-allocation-table tr:hover {
+  background: #f8f9fa;
+}
+
+.category-cell {
+  font-weight: 600;
+  color: #495057;
+  background: #e9ecef;
+}
+
+.subcategory-cell {
+  font-weight: 500;
+  color: #6c757d;
+}
+
+.current-cell {
+  text-align: center;
+  color: #495057;
+  font-weight: 500;
+}
+
+.ideal-cell {
+  text-align: center;
+  color: #28a745;
+  font-weight: 500;
+}
+
+.suggested-cell {
+  text-align: center;
+}
+
+.suggested-cell input {
+  width: 60px;
+  padding: 4px 6px;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.suggested-cell input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.25);
+}
+
+.deficit-cell {
+  text-align: center;
+  font-weight: 500;
+}
+
+.deficit-cell-high {
+  color: #dc3545;
+  background: #f8d7da;
+}
+
+.deficit-cell-low {
+  color: #28a745;
+  background: #d4edda;
+}
+
+.suggested-cell-high {
+  background: #fff3cd;
+}
+
+.suggested-cell-low {
+  background: #f8f9fa;
+}
+
+/* Category separators and headers */
+.category-separator {
+  height: 20px;
+}
+
+.separator-cell {
+  padding: 0 !important;
+  border: none !important;
+}
+
+.separator-line {
+  height: 2px;
+  background: linear-gradient(to right, transparent, #dee2e6, transparent);
+  margin: 8px 0;
+}
+
+.category-header {
+  background: #f8f9fa;
+  font-weight: 600;
+}
+
+.category-header-cell {
+  text-align: center;
+  padding: 12px 8px !important;
+  font-size: 14px;
+  color: #495057;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.available-cell {
+  text-align: center;
+  color: #17a2b8;
+  font-weight: 500;
+}
+
+.weight-cell {
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.ratio-cell {
+  text-align: center;
+  font-size: 12px;
+  padding: 6px 4px;
+}
+
+.current-ratio {
+  display: block;
+  font-weight: 600;
+  color: #495057;
+}
+
+.target-ratio {
+  display: block;
+  font-size: 10px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.utopia-notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10001;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.3s ease;
+}
+
+.utopia-notification-success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.utopia-notification-error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .utopia-allocator-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    min-width: auto;
+    max-width: none;
+  }
+  
+  .utopia-allocation-table {
+    font-size: 12px;
+  }
+  
+  .utopia-allocation-table th,
+  .utopia-allocation-table td {
+    padding: 6px 4px;
+  }
+  
+  .suggested-cell input {
+    width: 50px;
+    font-size: 12px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .utopia-allocator-container {
+    background: #2d3748;
+    border-color: #4a90e2;
+    color: #e2e8f0;
+  }
+  
+  .utopia-allocation-table {
+    background: #2d3748;
+    color: #e2e8f0;
+  }
+  
+  .utopia-allocation-table th {
+    background: #4a5568;
+    border-bottom-color: #718096;
+  }
+  
+  .utopia-allocation-table td {
+    border-bottom-color: #4a5568;
+  }
+  
+  .utopia-allocation-table tr:hover {
+    background: #4a5568;
+  }
+  
+  .category-cell {
+    background: #4a5568;
+    color: #e2e8f0;
+  }
+  
+  .subcategory-cell {
+    color: #a0aec0;
+  }
+  
+  .current-cell {
+    color: #e2e8f0;
+  }
+  
+  .suggested-cell input {
+    background: #4a5568;
+    border-color: #718096;
+    color: #e2e8f0;
+  }
+  
+  .suggested-cell input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.25);
+  }
+  
+  .deficit-cell-high {
+    color: #feb2b2;
+    background: #742a2a;
+  }
+  
+  .deficit-cell-low {
+    color: #9ae6b4;
+    background: #22543d;
+  }
+  
+  .suggested-cell-high {
+    background: #744210;
+  }
+  
+  .suggested-cell-low {
+    background: #4a5568;
+  }
+  
+  .available-cell {
+    color: #4fd1c7;
+  }
+  
+  .weight-cell {
+    color: #a0aec0;
+  }
+  
+  .current-ratio {
+    color: #e2e8f0;
+  }
+  
+  .target-ratio {
+    color: #a0aec0;
+  }
+  
+  .separator-line {
+    background: linear-gradient(to right, transparent, #4a5568, transparent);
+  }
+  
+  .category-header {
+    background: #4a5568;
+  }
+  
+  .category-header-cell {
+    color: #e2e8f0;
+    border-bottom-color: #718096;
+  }
+}

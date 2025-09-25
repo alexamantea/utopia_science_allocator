@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Utopia Science Allocator",
+  "version": "1.0.0",
+  "description": "Automatically calculate and distribute science books in Utopia based on player-defined ratios",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://utopia-game.com/wol/game/science*", 
+        "*://*.utopia-game.com/wol/game/science*",
+        "*://utopia-game.com/gen/game/science*",
+        "*://*.utopia-game.com/gen/game/science*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Utopia Science Allocator"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
