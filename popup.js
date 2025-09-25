@@ -2,30 +2,31 @@
 
 class PopupManager {
   constructor() {
+    // Use the same default ratios as StorageManager
     this.defaultRatios = {
       economy: {
         alchemy: 2,
         tools: 2,
-        housing: 1,
+        housing: 2,
         production: 2,
         bookkeeping: 1,
-        artisan: 1
+        artisan: 0
       },
       military: {
-        strategy: 2,
+        strategy: 5,
         siege: 1,
-        tactics: 2,
+        tactics: 10,
         valor: 1,
         heroism: 1,
-        resilience: 1
+        resilience: 10
       },
       arcane: {
-        crime: 2,
-        channeling: 2,
+        crime: 20,
+        channeling: 20,
         shielding: 1,
         cunning: 1,
         sorcery: 1,
-        finesse: 1
+        finesse: 10
       }
     };
     
